@@ -21,7 +21,8 @@ public class ContArea : MonoBehaviour {
 
         _a1.connections.Add (_a2.id);
         _a2.connections.Add (_a1.id);
-    
+
+        // Roads
         LineRenderer _lineRend = _a1.go.AddComponent<LineRenderer>();
         _lineRend.material = road;
         _lineRend.startWidth = _width;
@@ -32,9 +33,5 @@ public class ContArea : MonoBehaviour {
         };
         _lineRend.positionCount = _linePos.Length;
         _lineRend.SetPositions(_linePos);
-    }
-
-    public void render_roads (){
-        
     }
 }

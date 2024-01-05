@@ -13,7 +13,7 @@ public class MG : MonoBehaviour {
     }
 
     void Update() {
-        ContArea.I.render_roads ();
+        
     }
 
     public void change_scene (string _scene){
