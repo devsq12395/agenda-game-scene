@@ -9,10 +9,23 @@ public class ContArea : MonoBehaviour {
 
     public Material road; // Set in Editor
 
+    public List<ObjArea> areas;
+
     public void setup (){
-        
+        _areasGO = GameObject.FindGameObjectsWithTag ("area");
+        for (GameObject _a in _areasGO) {
+            areas.Add (_a.GetComponent <ObjArea> ());
+        }
     }
 
+    // Area to Player control
+    public void add_relations (ContPlayers.Player _p){
+        for (ContArea _a in areas) {
+            relation.Add (_a.name, "neutral");
+        }
+    }
+
+    // Area to Area control
     public void connect (ObjArea _a1, ObjArea _a2){
         float _width = 0.1f;
 

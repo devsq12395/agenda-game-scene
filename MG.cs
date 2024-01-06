@@ -10,6 +10,8 @@ public class MG : MonoBehaviour {
         
 
         ContArea.I.setup ();
+        ContPlayers.I.setup ();
+        ContChars.I.setup ();
     }
 
     void Update() {

@@ -1,0 +1,7 @@
+To add to editor:
+
+- COntPLayers.cs
+- ContChars.cs
+
+- Create 2 sample areas, add their components (sample: AR_SampleArea)
+- Create a sample char, add "CH_SampleChar" component
