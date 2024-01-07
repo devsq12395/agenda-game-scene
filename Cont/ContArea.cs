@@ -12,16 +12,16 @@ public class ContArea : MonoBehaviour {
     public List<ObjArea> areas;
 
     public void setup (){
-        _areasGO = GameObject.FindGameObjectsWithTag ("area");
-        for (GameObject _a in _areasGO) {
+        GameObject[] _areasGO = GameObject.FindGameObjectsWithTag ("area");
+        foreach (GameObject _a in _areasGO) {
             areas.Add (_a.GetComponent <ObjArea> ());
         }
     }
 
     // Area to Player control
     public void add_relations (ContPlayers.Player _p){
-        for (ContArea _a in areas) {
-            relation.Add (_a.name, "neutral");
+        foreach (ObjArea _a in areas) {
+            _a.relation.Add (_a.name, "neutral");
         }
     }
 
