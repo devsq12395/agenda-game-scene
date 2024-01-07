@@ -7,9 +7,10 @@ public class MG : MonoBehaviour {
 	public void Awake(){ I = this; }
 
     void Start() {
-        
+        // TEST
+        PlayerPrefs.SetString ("map", "testMap");
 
-        ContArea.I.setup ();
+        ContMap.I.setup_map ();
         ContPlayers.I.setup ();
         ContChars.I.setup ();
     }

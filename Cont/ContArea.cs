@@ -14,14 +14,21 @@ public class ContArea : MonoBehaviour {
     public void setup (){
         GameObject[] _areasGO = GameObject.FindGameObjectsWithTag ("area");
         foreach (GameObject _a in _areasGO) {
-            areas.Add (_a.GetComponent <ObjArea> ());
+            ObjArea[] _areaComps = _a.GetComponents<ObjArea>();
+            _areaComps [0].setup ();
+            areas.Add (_areaComps [0]);
         }
+    }
+
+    // GET Functions
+    public ObjArea get_area (string _name){
+        return areas.Find(area => area.name == _name);
     }
 
     // Area to Player control
     public void add_relations (ContPlayers.Player _p){
         foreach (ObjArea _a in areas) {
-            _a.relation.Add (_a.name, "neutral");
+            _a.relation.Add (_p.name, "neutral");
         }
     }
 

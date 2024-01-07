@@ -20,6 +20,7 @@ public class ContMap : MonoBehaviour {
         map = details.mapObj;
         pointList = details.pointList;
 
+        ContArea.I.setup ();
         create_map_objs ();
     }
 

@@ -20,6 +20,7 @@ public class ContPlayers : MonoBehaviour {
     public List<Player> players;
 
     public void setup (){
+        players = new List<Player> ();
         players.Add (create_player ("p1", 1));
         players.Add (create_player ("p2", 2));
     }

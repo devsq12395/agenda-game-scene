@@ -1,7 +1,5 @@
-To add to editor:
+To do:
 
-- COntPLayers.cs
-- ContChars.cs
-
-- Create 2 sample areas, add their components (sample: AR_SampleArea)
-- Create a sample char, add "CH_SampleChar" component
+- On Editor, create a sample char, add "CH_SampleChar" component
+- Make this char move from point to point
+- Camera controls
