@@ -13,6 +13,8 @@ public class MG : MonoBehaviour {
         ContMap.I.setup_map ();
         ContPlayers.I.setup ();
         ContChars.I.setup ();
+
+        UI_AreaChk.I.setup ();
     }
 
     void Update() {

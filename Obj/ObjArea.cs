@@ -7,7 +7,8 @@ public class ObjArea : MonoBehaviour {
 
     [Header("------ UNITY EDITOR EDITABLE PARTS ------")]
     public string name;
-    public List<string> optBad, optIntimidated, optNeutral, optFriends, optAllies;
+    public string nameUI;
+    public List<string> optEnemies, optNeutral, optFriends;
 
     [Header("------ NON-EDITABLE PARTS ------")]
     public GameObject go;
@@ -25,11 +26,9 @@ public class ObjArea : MonoBehaviour {
         relation = new Dictionary <string, string> ();
         id = Misc.I.generate_id ();
 
-        options.Add ("bad", new List<string>(optBad));
-        options.Add ("intimidated", new List<string>(optIntimidated));
+        options.Add ("enemies", new List<string>(optEnemies));
         options.Add ("neutral", new List<string>(optNeutral));
         options.Add ("friends", new List<string>(optFriends));
-        options.Add ("allies", new List<string>(optAllies));
     }
 
     

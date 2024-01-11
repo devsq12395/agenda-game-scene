@@ -1,5 +1,4 @@
 To do:
 
 - On Editor, create a sample char, add "CH_SampleChar" component
-- Make this char move from point to point
 - Camera controls
