@@ -25,11 +25,20 @@ public class ContArea : MonoBehaviour {
         return areas.Find(area => area.name == _name);
     }
 
+     public ObjArea get_area_from_id (int _id){
+        return areas.Find(area => area.id == _id);
+    }
+
     // Area to Player control
     public void add_relations (ContPlayers.Player _p){
         foreach (ObjArea _a in areas) {
             _a.relation.Add (_p.name, "neutral");
         }
+    }
+
+    // Area to Char control
+    public void assign_task_to_char (ObjArea _area, ObjChar _c, string _t){
+        _c.transform.position = _area.transform.position;
     }
 
     // Area to Area control
